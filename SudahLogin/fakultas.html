@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Universitas Indonesia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        /* BODY */
+        body {
+            background: linear-gradient(to bottom, #3c45eb, #aec7f3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0883f7, #97c3ed);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: rgb(22, 55, 104);
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 14px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e3a513;
+            color: white;
+        }
+
+        /* COURSES */
+        .courses {
+            padding: 50px 6%;
+        }
+
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARD */
+        .course-card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.35s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+        }
+
+        /* IMAGE */
+        .course-img img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .course-card:hover .course-img img {
+            transform: scale(1.08);
+        }
+
+        /* CONTENT */
+        .course-content {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .course-content h3 {
+            font-size: 19px;
+            margin-bottom: 6px;
+            color: #003366;
+        }
+
+        .lessons {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* BACK BUTTON */
+        .back-container {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .back-btn {
+            padding: 12px 32px;
+            font-size: 16px;
+            background: linear-gradient(135deg, #0055a5, #003366);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+         footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>UNIVERSITAS INDONESIA</h1>
+</header>
+
+<nav>
+    <a href="latihan 14.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="fakultas.html">FAKULTAS</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="kontakdanlokasi.html">KONTAK DAN LOKASI</a>
+    <a href="../latihan 14.html">LOGOUT</a>
+</nav>
+
+<section class="courses">
+    <div class="course-container">
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/Ilmu Komputer.webp" alt="Ilmu Komputer">
+            </div>
+            <div class="course-content">
+                <h3>Ilmu Komputer</h3>
+                <p class="lessons">2.000 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/dokter gigi.jpg" alt="Kedokteran Gigi">
+            </div>
+            <div class="course-content">
+                <h3>Kedokteran Gigi</h3>
+                <p class="lessons">1.500 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/Ilmu Administrasi.jpg" alt="Ilmu Administrasi">
+            </div>
+            <div class="course-content">
+                <h3>Ilmu Administrasi</h3>
+                <p class="lessons">500 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/kesehatan masyarakat.jpg" alt="Kesehatan Masyarakat">
+            </div>
+            <div class="course-content">
+                <h3>Kesehatan Masyarakat</h3>
+                <p class="lessons">1.898 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/psikologi.webp" alt="Psikologi">
+            </div>
+            <div class="course-content">
+                <h3>Psikologi</h3>
+                <p class="lessons">1.242 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/keperawatan.webp" alt="Keperawatan">
+            </div>
+            <div class="course-content">
+                <h3>Keperawatan</h3>
+                <p class="lessons">341 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/kedokteran.jpg" alt="Kedokteran">
+            </div>
+            <div class="course-content">
+                <h3>Kedokteran</h3>
+                <p class="lessons">5.000 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/Ekonomi dan Bisnis.webp" alt="Ekonomi dan Bisnis">
+            </div>
+            <div class="course-content">
+                <h3>Ekonomi dan Bisnis</h3>
+                <p class="lessons">346 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/farmasi.jpg" alt="Farmasi">
+            </div>
+            <div class="course-content">
+                <h3>Farmasi</h3>
+                <p class="lessons">572 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/teknik.jpg" alt="Teknik">
+            </div>
+            <div class="course-content">
+                <h3>Teknik</h3>
+                <p class="lessons">8.395 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/pendidikan vokasi.jpg" alt="Pendidikan Vokasi">
+            </div>
+            <div class="course-content">
+                <h3>Pendidikan Vokasi</h3>
+                <p class="lessons">2.352 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/sosial,politik.jpg" alt="FISIP">
+            </div>
+            <div class="course-content">
+                <h3>Ilmu Sosial & Ilmu Politik</h3>
+                <p class="lessons">3.500 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/Sekolah Ilmu Lingkungan.png" alt="SIL">
+            </div>
+            <div class="course-content">
+                <h3>Sekolah Ilmu Lingkungan</h3>
+                <p class="lessons">421 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/SKSG.jpg" alt="SKSG">
+            </div>
+            <div class="course-content">
+                <h3>Sekolah Kajian Stratejik</h3>
+                <p class="lessons">231 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/Fakultas Hukum.webp" alt="Hukum">
+            </div>
+            <div class="course-content">
+                <h3>Hukum</h3>
+                <p class="lessons">1.156 Lessons</p>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-img">
+                <img src="foto/ipb.jpg" alt="Ilmu Budaya">
+            </div>
+            <div class="course-content">
+                <h3>Ilmu Pengetahuan Budaya</h3>
+                <p class="lessons">210 Lessons</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    &copy; NADIN PUTRI RAIHANI
+</footer>
+
+</body>
+</html>

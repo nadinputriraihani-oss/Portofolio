@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak dan Lokasi</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        /* BODY */
+        body {
+            background: linear-gradient(to bottom, #3c45eb, #aec7f3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0883f7, #97c3ed);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: rgb(22, 55, 104);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 14px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #97cada;
+            color: #163768;
+        }
+
+        /* SECTION */
+        .section {
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 900px;
+            width: 90%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .section h2 {
+            color: #003366;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+        }
+
+        /* GOOGLE MAPS */
+        iframe {
+            margin-top: 20px;
+            width: 100%;
+            height: 320px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        /* TOMBOL KEMBALI KE HALAMAN UTAMA */
+        .back-home {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .back-home a {
+            display: inline-block;
+            background: #d5e7ff;
+            color: #163768;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 30px;
+            border: 1px solid #b4d2f5;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(22, 55, 104, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* EFEK SAAT KURSOR DIARAHKAN */
+        .back-home a:hover {
+            background: #97cada;
+            color: #163768;
+            border-color: #83bdcf;
+            box-shadow: 0 8px 20px rgba(22, 55, 104, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* EFEK SAAT TOMBOL DIKLIK */
+        .back-home a:active {
+            background: #b8dce8;
+            color: #163768;
+            transform: scale(0.97);
+            box-shadow: 0 2px 8px rgba(22, 55, 104, 0.15);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                gap: 8px;
+            }
+
+            nav a {
+                padding: 6px 8px;
+                font-size: 13px;
+            }
+
+            .section {
+                padding: 20px;
+                margin: 30px auto;
+            }
+
+            .back-home a {
+                padding: 12px 22px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>KONTAK &amp; LOKASI</h1>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="latihan 14.html">HOME</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="fakultas.html">FAKULTAS</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="kontakdanlokasi.html">KONTAK &amp; LOKASI</a>
+        <a href="LOGIN.html">LOGOUT</a>
+    </nav>
+
+    <!-- INFORMASI KONTAK -->
+    <div class="section">
+        <h2>Kontak</h2>
+        <p><strong>Nama:</strong> Universitas Indonesia</p>
+        <p><strong>Email:</strong> info@ui.ac.id</p>
+        <p><strong>Telepon:</strong> (021) 7270001</p>
+        <p><strong>Alamat:</strong> Depok, Jawa Barat, Indonesia</p>
+    </div>
+
+    <!-- LOKASI -->
+    <div class="section">
+        <h2>Lokasi</h2>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!3m2!1sid!2sid!4v1768071537943!5m2!1sid!2sid!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREUwYWpFZWc.!2m2!1d-6.368141114376252!2d106.8295117778674!3f325.9207!4f0!5f0.7820865974627469"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; NADIN PUTRI RAIHANI
+    </footer>
+
+    <!-- TOMBOL KEMBALI KE HALAMAN UTAMA -->
+    <div class="back-home">
+        <a href="../Porofolio.html">
+            ← KEMBALI KE HALAMAN PORTOFOLIO
+        </a>
+    </div>
+
+</body>
+</html>

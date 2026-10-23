@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Universitas Indonesia</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #3c45eb, #aec7f3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0883f7, #97c3ed);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+        header {
+    background-image: url("univv indo.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 300px;            
+    padding: 20px;
+
+}
+
+        /* NAVBAR */
+        nav {
+            background-color: rgb(22, 55, 104);
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 14px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e3a513;
+            color: rgb(255, 255, 255);
+        }
+
+        /* CARD CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: rgb(255, 253, 253);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>UNIVERSITAS INDONESIA</h1>
+</header>
+
+<nav>
+    <a href="latihan 14.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="fakultas.html">FAKULTAS</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="kontakdanlokasi.html">KONTAK DAN LOKASI</a>
+    <a href="LOGIN.html">LOGOUT</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <img src="foto/ui.jpg" alt="Visi UI">
+        <h3>VISI</h3>
+        <p>
+            Menjadi pusat ilmu pengetahuan, teknologi, dan kebudayaan yang unggul dan
+            berdaya saing melalui upaya mencerdaskan kehidupan bangsa serta
+            berkontribusi bagi pembangunan Indonesia dan dunia.
+        </p>
+    </div>
+
+    <div class="card">
+        <img src="foto/sosial,politik.jpg" alt="Misi UI">
+        <h3>MISI</h3>
+        <p>
+            Menyediakan akses pendidikan yang luas dan adil.<br><br>
+            Menyelenggarakan Tridharma Perguruan Tinggi yang bermutu.<br><br>
+            Menghasilkan lulusan berintelektualitas tinggi dan berdaya saing global.<br><br>
+            Menciptakan iklim akademik yang mendukung terwujudnya visi UI.
+        </p>
+    </div>
+</div>
+
+<footer>
+    &copy; NADIN PUTRI RAIHANI
+</footer>
+
+</body>
+</html>

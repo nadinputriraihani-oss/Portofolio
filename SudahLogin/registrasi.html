@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username</title>
+        <style>
+                body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Background gambar + gradasi */
+        background:
+            linear-gradient(135deg, rgba(160, 182, 237, 0.7), rgba(7, 40, 228, 0.247)),
+            url("foto/din.jpeg");
+        background-size: cover;
+        background-position: center;
+       
+    }
+
+    /* Animasi background */
+    @keyframes bgMove {
+        
+        100% {
+            background-position: center;
+        }
+    }
+
+    .box {
+        background: rgba(219, 207, 207, 0.156);
+        padding: 35px;
+        width: 320px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.397);
+
+       
+    }
+
+    @keyframes fadeSlide {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h2 {
+        text-align: center ;
+    }
+
+    label {
+        margin-top: 5px;
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 10%;
+        padding: 10px;
+        margin-top: 20px;
+        background: #43e97b;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-login {
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin: 20px auto;
+    padding: 10px;
+    background: #43b1ec;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+    button:hover {
+        background: #abf3da;
+    }
+
+    button a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    a {
+        color: #021e0dc3;
+        text-decoration: none;
+    }
+</style>
+    </head>
+</head>
+<body>
+        <div class="box">
+            <h2>Data Diri</h2>
+            <from>
+                <label>Nama Lengkap</label>
+                <input type="text" required>
+
+                <label>Nomor Induk (NIK,NIS,NISN)</label>
+                <input type="text" required>
+
+                <label>Nomor Hp</label>
+                <input type="text" required>
+
+                 <label>Email</label>
+                <input type="text" required>
+
+                <label for="jenis_kelamin">Jenis Kelamin</label>
+        <select>
+            <option value="pilih Jenis Kelamin">pilih Jenis Kelamin</option>
+             <option value="Laki-Laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
+        </select>
+
+                <label>Tanggal Lahir</label>
+                <input type="text" required>
+
+
+                <a href="LOGIN.html" class="btn-login">Daftar</a>
+            </from>
+            <p>Sudah punya akun? <a href="LOGIN.html">Login</a></p>
+        </div>
+    </body>
+</html>

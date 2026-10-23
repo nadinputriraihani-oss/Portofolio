@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Background gambar + gradasi */
+        background:
+            linear-gradient(135deg, rgba(160, 182, 237, 0.7), rgba(7, 40, 228, 0.247)),
+            url("foto/gg.jpeg");
+        background-size: cover;
+        background-position: center;
+       
+    }
+
+    /* Animasi background */
+    @keyframes bgMove {
+        
+        100% {
+            background-position: center;
+        }
+    }
+
+    .box {
+        background: rgba(219, 207, 207, 0.156);
+        padding: 35px;
+        width: 320px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.397);
+
+       
+    }
+
+    @keyframes fadeSlide {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h2 {
+        text-align: center ;
+    }
+
+    label {
+        margin-top: 5px;
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+   
+    .btn-login {
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin: 20px auto;
+    padding: 10px;
+    background: #43b1ec;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    a {
+        color: #021e0dc3;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Login</h2>
+    <marquee behavior="scroll">
+    ✨ Silakan masuk untuk melanjutkan ✨
+</marquee>
+
+    <form>
+        <label>Username</label>
+        <input type="text" required>
+
+        <label>Password</label>
+        <input type="password" required>
+
+
+        <a href="latihan 14.html" class="btn-login">Login</a>
+            
+            <p>Sudah punya akun? <a href="registrasi.html">Daftar</a></p>
+    </form>
+
+        </div>
+    </body>
+</html>

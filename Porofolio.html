@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Nadin Putri Raihani</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .soft-bg {
+            background:
+                radial-gradient(circle at top left, #ffe0e8, transparent 40%),
+                radial-gradient(circle at bottom right, #fce7f3, transparent 35%),
+                #fff7f9;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(14px);
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(201, 101, 131, 0.15);
+        }
+
+        .skill-tag {
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            background-color: #fce0e8;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+    </style>
+</head>
+
+<body class="soft-bg text-[#594a4e] min-h-screen">
+
+    <!-- HALAMAN PEMBUKA -->
+    <div id="login-page"
+         class="fixed inset-0 z-50 flex items-center justify-center bg-[#ffe8ee] transition-opacity duration-700">
+
+        <div class="text-center p-8 md:p-10 bg-white/85 backdrop-blur-md rounded-[32px] shadow-xl max-w-md w-full mx-5 border border-[#ffd5df]">
+
+            <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-[#fff0f4] flex items-center justify-center">
+                <i class="fas fa-heart text-4xl text-[#d87093]"></i>
+            </div>
+
+            <p class="text-xs tracking-[3px] uppercase text-[#c98a9d] mb-3">
+                Welcome to my website
+            </p>
+
+            <p class="text-sm text-[#8f737c] leading-relaxed mb-7">
+                Halo! Selamat datang di portofolio Nadin.
+            </p>
+
+            <button onclick="openWebsite()"
+                class="px-8 py-3 bg-[#e99ab0] hover:bg-[#d87093] text-white font-semibold rounded-full shadow-md transition-all hover:scale-105">
+                Masuk ke Beranda <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- WEBSITE UTAMA -->
+    <div id="main-website" class="hidden opacity-0 transition-opacity duration-700">
+
+        <!-- NAVBAR -->
+        <nav class="fixed top-0 left-0 right-0 z-40 glass border-b border-[#f5dce3] shadow-sm">
+
+            <div class="max-w-6xl mx-auto px-5 md:px-8 py-4 flex justify-between items-center">
+
+                <a href="#profil" class="font-bold text-lg text-[#c76583]">
+                    <i class="fas fa-heart mr-1"></i> Nadin's Portfolio
+                </a>
+
+                <div class="hidden md:flex gap-6 text-sm font-medium">
+                    <a href="#profil" class="hover:text-[#d87093] transition">Profil Saya</a>
+                    <a href="#project" class="hover:text-[#d87093] transition">Project Saya</a>
+                    <a href="#rating" class="hover:text-[#d87093] transition">Rating Skills</a>
+                    <a href="#tujuan" class="hover:text-[#d87093] transition">Tujuan Saya</a>
+                    <a href="#kontak" class="hover:text-[#d87093] transition">Kontak</a>
+                </div>
+
+                <button onclick="toggleMenu()"
+                    class="md:hidden text-[#c76583] text-xl"
+                    aria-label="Buka menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+                <div class="flex flex-col gap-4 text-sm">
+                    <a onclick="toggleMenu()" href="#profil">Profil Saya</a>
+                    <a onclick="toggleMenu()" href="#project">Project Saya</a>
+                    <a onclick="toggleMenu()" href="#rating">Rating Skills</a>
+                    <a onclick="toggleMenu()" href="#tujuan">Tujuan Saya</a>
+                    <a onclick="toggleMenu()" href="#kontak">Kontak</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- PROFIL -->
+        <header id="profil" class="pt-32 pb-16 px-5">
+
+            <div class="max-w-5xl mx-auto glass p-7 md:p-12 rounded-[32px] shadow-lg border border-[#f5dce3]">
+
+                <div class="flex flex-col md:flex-row items-center gap-8">
+
+                    <div class="shrink-0 text-center">
+
+                        <div class="p-2 rounded-full bg-gradient-to-br from-[#f7b6c8] to-[#fce7f3] shadow-lg">
+
+                            <img src="pp.jpeg"
+                                 alt="Foto Nadin Putri Raihani"
+                                 class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-white"
+                                 onerror="this.style.display='none';document.getElementById('photo-fallback').classList.remove('hidden');document.getElementById('photo-fallback').classList.add('flex')">
+
+                            <div id="photo-fallback"
+                                 class="hidden w-40 h-40 md:w-48 md:h-48 rounded-full bg-[#fff0f4] items-center justify-center text-[#d87093]">
+                                <i class="fas fa-user text-6xl"></i>
+                            </div>
+                        </div>
+
+                        <span class="inline-block mt-4 px-4 py-2 bg-[#fff0f4] text-[#c76583] rounded-full text-xs font-medium">
+                            <i class="fas fa-circle text-[7px] mr-1"></i>
+                            Student of RPL
+                        </span>
+                    </div>
+
+
+                    <div class="flex-1 text-center md:text-left">
+
+                        <p class="text-sm font-medium text-[#c98a9d] mb-2">
+                            HALO, PERKENALKAN SAYA
+                        </p>
+
+                        <h1 class="text-3xl md:text-4xl font-bold text-[#c76583] mb-3">
+                            Nadin Putri Raihani
+                        </h1>
+
+                        <p class="text-sm text-[#8f737c] leading-relaxed mb-6">
+                            Saya adalah siswi SMKN 71 Jakarta jurusan Rekayasa Perangkat Lunak (RPL).
+                            Saya tertarik dengan dunia teknologi, pembuatan website, dan desain UI/UX.
+                            Saya senang mempelajari hal baru dan ingin terus mengembangkan kemampuan
+                            untuk mempersiapkan diri memasuki dunia kerja.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mb-6">
+
+                            <div class="flex items-center gap-3 bg-white/80 p-3 rounded-xl">
+                                <i class="fas fa-calendar text-[#d87093]"></i>
+                                <span>24 Juli 2009</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-white/80 p-3 rounded-xl">
+                                <i class="fas fa-school text-[#d87093]"></i>
+                                <span>SMKN 71 Jakarta</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-white/80 p-3 rounded-xl sm:col-span-2">
+                                <i class="fas fa-code text-[#d87093]"></i>
+                                <span>Rekayasa Perangkat Lunak (RPL)</span>
+                            </div>
+                        </div>
+
+                        <a href="#project"
+                           class="inline-flex items-center px-6 py-3 bg-[#e99ab0] hover:bg-[#d87093] text-white rounded-full text-sm font-semibold transition-all hover:scale-105">
+                            Lihat Project Saya
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- PROJECT SAYA: HANYA 3 PROJECT -->
+        <section id="project" class="py-20 px-6 bg-pink-50">
+
+            <div class="max-w-6xl mx-auto">
+
+                <h2 class="text-3xl font-bold text-center text-pink-700 mb-3">
+                    Project Saya
+                </h2>
+
+                <p class="text-center text-gray-600 mb-10">
+                    Beberapa project yang saya buat selama belajar RPL.
+                    Klik project untuk melihat detailnya.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- PROJECT 1 -->
+                    <a href="SudahLogin/LOGIN.html"
+                       class="project-card block bg-white rounded-2xl shadow-md overflow-hidden">
+
+                        <img src="SudahLogin/pp.jpeg" alt="UI Campus Explorer"
+                             class="w-full h-48 object-cover">
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-pink-700">
+                                UI Campus Explorer
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+Website informasi universitas Indonesia yang menampilkan halaman Home, Profil, Fakultas, Galeri, Kontak, dan Lokasi untuk membantu pengunjung mengenal kampus UI.
+                            </p>
+                            <span class="text-sm text-pink-600">HTML, CSS, JavaScript</span>
+                            <p class="mt-4 text-sm font-semibold text-pink-700">
+                                Lihat Detail Project →
+                            </p>
+                        </div>
+                    </a>
+
+
+                    <!-- PROJECT 2 -->
+                    <a href="Figma/figma.html"
+                       class="project-card block bg-white rounded-2xl shadow-md overflow-hidden">
+
+                        <img src="Figma/PuffyPeach.jpeg" alt="Desain Puffy Peach"
+                             class="w-full h-48 object-cover">
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-pink-700">
+                                Desain UI/UX Puffy Peach
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Desain website toko baju dengan tema pink pastel menggunakan Figma.
+                            </p>
+                            <span class="text-sm text-pink-600">Figma, UI/UX Design</span>
+                            <p class="mt-4 text-sm font-semibold text-pink-700">
+                                Lihat Detail Project →
+                            </p>
+                        </div>
+                    </a>
+
+
+                    <!-- PROJECT 3 -->
+                    <a href="latihan13/latihann13.html"
+                       class="project-card block bg-white rounded-2xl shadow-md overflow-hidden">
+
+                        <img src="oo.jpeg" alt="Website Biodata Siswa"
+                             class="w-full h-48 object-cover">
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-pink-700">
+                                Website Biografi Ki Hadjar Dewantara
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Website yang membahas biografi Ki Hadjar Dewantara, mulai dari biodata, riwayat pendidikan, hingga profesi dan perjuangannya dalam memajukan pendidikan serta memperjuangkan kemerdekaan Indonesia.
+                            </p>
+                            <span class="text-sm text-pink-600">HTML, CSS</span>
+                            <p class="mt-4 text-sm font-semibold text-pink-700">
+                                Lihat Detail Project →
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- RATING SKILLS -->
+        <section id="rating" class="py-16 px-5 md:px-6">
+
+            <div class="max-w-5xl mx-auto">
+
+                <h2 class="text-3xl font-bold text-center text-[#c76583] mb-3">
+                    Rating Skills Saya
+                </h2>
+
+                <p class="text-center text-[#8f737c] mb-10">
+                    Penilaian kemampuan yang saya miliki di bidang teknologi
+                    dan pengembangan diri.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- TECHNICAL SKILLS -->
+                    <div class="bg-[#fff5f7] p-6 rounded-2xl border border-[#ffe0e6] shadow-sm">
+
+                        <h3 class="text-lg font-bold text-[#c76583] mb-6">
+                            <i class="fas fa-laptop-code mr-2"></i>
+                            Technical Skills
+                        </h3>
+
+                        <!-- HTML -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>HTML</span>
+                                <span class="font-semibold text-[#c76583]">85%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>CSS</span>
+                                <span class="font-semibold text-[#c76583]">80%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- JAVASCRIPT -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>JavaScript</span>
+                                <span class="font-semibold text-[#c76583]">75%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- MYSQL -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>MySQL</span>
+                                <span class="font-semibold text-[#c76583]">75%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- UI/UX -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>UI/UX</span>
+                                <span class="font-semibold text-[#c76583]">85%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <!-- TAILWIND CSS -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Tailwind CSS</span>
+                                <span class="font-semibold text-[#c76583]">70%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- SOFT SKILLS -->
+                    <div class="bg-[#fff5f7] p-6 rounded-2xl border border-[#ffe0e6] shadow-sm">
+
+                        <h3 class="text-lg font-bold text-[#c76583] mb-6">
+                            <i class="fas fa-heart mr-2"></i>
+                            Soft Skills
+                        </h3>
+
+                        <!-- ADAPTASI -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2 gap-3">
+                                <span>Beradaptasi dengan Orang Baru</span>
+                                <span class="font-semibold text-[#c76583]">70%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <!-- KOMUNIKASI -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Komunikasi</span>
+                                <span class="font-semibold text-[#c76583]">90%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- BERANI BERPENDAPAT -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Berani Berpendapat</span>
+                                <span class="font-semibold text-[#c76583]">75%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- KERJA SAMA TIM -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Kerja Sama Tim</span>
+                                <span class="font-semibold text-[#c76583]">80%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- MANAJEMEN WAKTU -->
+                        <div class="mb-5">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Manajemen Waktu</span>
+                                <span class="font-semibold text-[#c76583]">90%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- MAU BELAJAR -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Mau Belajar Hal Baru</span>
+                                <span class="font-semibold text-[#c76583]">95%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="bg-[#e99ab0] h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TUJUAN SAYA -->
+        <section id="tujuan" class="py-16 px-5 md:px-6 max-w-5xl mx-auto">
+
+            <div class="glass p-8 md:p-12 rounded-[32px] shadow-lg border border-[#f5dce3] relative overflow-hidden">
+
+                <div class="absolute -top-12 -right-10 w-40 h-40 rounded-full bg-[#ffe3e9]/70"></div>
+
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+
+                    <div class="w-16 h-16 mx-auto mb-5 bg-[#fff0f4] rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-bullseye text-3xl text-[#d87093]"></i>
+                    </div>
+
+                    <p class="text-xs tracking-[3px] text-[#c98a9d] uppercase mb-3">
+                        My Future Goals
+                    </p>
+
+                    <h2 class="text-3xl font-bold text-[#c76583] mb-5">
+                        Tujuan Saya
+                    </h2>
+
+                    <p class="text-sm md:text-base text-[#8f737c] leading-relaxed">
+                        Tujuan saya adalah mengembangkan kemampuan di bidang teknologi, khususnya dalam pembuatan website dan desain UI/UX. Saya ingin menciptakan website yang tidak hanya menarik secara visual, tetapi juga memiliki tampilan yang nyaman, mudah digunakan, dan bermanfaat bagi penggunanya. Saya akan terus belajar, mengeksplorasi ide-ide kreatif, serta meningkatkan kemampuan dalam pemrograman dan desain agar dapat menghasilkan karya digital yang berkualitas dan siap bersaing di dunia kerja.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-3 mt-7">
+                        <span class="px-4 py-2 bg-[#fff0f4] text-[#b85e7b] text-xs rounded-full">
+                            <i class="fas fa-book-open mr-1"></i> Terus Belajar
+                        </span>
+
+                        <span class="px-4 py-2 bg-[#fff0f4] text-[#b85e7b] text-xs rounded-full">
+                            <i class="fas fa-code mr-1"></i> Mengembangkan Skill
+                        </span>
+
+                        <span class="px-4 py-2 bg-[#fff0f4] text-[#b85e7b] text-xs rounded-full">
+                            <i class="fas fa-star mr-1"></i> Meraih Tujuan
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- KONTAK -->
+        <footer id="kontak" class="bg-white/75 border-t border-[#f5dce3] py-10 px-5 mt-10">
+
+            <div class="max-w-5xl mx-auto text-center">
+
+                <div class="w-14 h-14 bg-[#fff0f4] rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <i class="fas fa-envelope text-2xl text-[#d87093]"></i>
+                </div>
+
+                <h2 class="text-2xl font-bold text-[#c76583] mb-3">
+                    Hubungi Saya
+                </h2>
+
+                <p class="text-sm text-[#8f737c] mb-6">
+                    Terima kasih sudah mengunjungi portofolio saya!
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+
+                    <a href="https://wa.me/qr/LZ5SOULUQY4MK1"
+                       target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-2 px-5 py-3 bg-[#fff0f4] hover:bg-[#ffe0e8] text-[#a95470] rounded-full text-sm transition">
+                        <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+                    </a>
+
+                    <a href="https://www.instagram.com/nadiennn_24/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-2 px-5 py-3 bg-[#fff0f4] hover:bg-[#ffe0e8] text-[#a95470] rounded-full text-sm transition">
+                        <i class="fab fa-instagram text-lg"></i> Instagram
+                    </a>
+
+                    <a href="mailto:nadinputriraihani@gmail.com"
+                       class="flex items-center gap-2 px-5 py-3 bg-[#fff0f4] hover:bg-[#ffe0e8] text-[#a95470] rounded-full text-sm transition">
+                        <i class="fas fa-envelope text-lg"></i> Email
+                    </a>
+                </div>
+
+                <div class="border-t border-[#f5dce3] pt-6">
+                    <p class="text-xs text-[#a39196]">
+                        &copy; 2026 Nadin Putri Raihani · Personal Portfolio
+                    </p>
+                    <p class="text-xs text-[#c98a9d] mt-2">
+                        Made with <i class="fas fa-heart"></i> and creativity
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function openWebsite() {
+            const loginPage = document.getElementById('login-page');
+            const mainWebsite = document.getElementById('main-website');
+
+            loginPage.classList.add('opacity-0');
+
+            setTimeout(() => {
+                loginPage.style.display = 'none';
+                mainWebsite.classList.remove('hidden');
+
+                requestAnimationFrame(() => {
+                    mainWebsite.classList.remove('opacity-0');
+                });
+            }, 500);
+        }
+
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
